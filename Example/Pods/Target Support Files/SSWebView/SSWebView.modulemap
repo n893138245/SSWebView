@@ -1,0 +1,6 @@
+framework module SSWebView {
+  umbrella header "SSWebView-umbrella.h"
+
+  export *
+  module * { export * }
+}
