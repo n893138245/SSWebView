@@ -8,16 +8,16 @@
 import UIKit
 import WebKit
 
-class WebViewVC: UIViewController {
+public class WebViewVC: UIViewController, WKUIDelegate, WKNavigationDelegate {
     /// 网络地址。默认地址为“百度”
-    var url: String = "https://www.baidu.com/"
+    public var url: String = "https://www.baidu.com/"
     /// 进度默认色。默认色为“白色”
     var trackTintColor: UIColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1) // 若不设置进度默认色，系统会有默认色。本想使用系统默认色，奈何。此处做法，参考微信/支付宝
     /// 进度执行色。默认色为“iPhone Safari浏览器进度条色“蓝色””
     var tintColor: UIColor = #colorLiteral(red: 0, green: 0.462745098, blue: 0.9764705882, alpha: 1) // 色值取自于iPhone Safari浏览器进度条执行色
     let kEstimatedProgress = "estimatedProgress" // 监听字段
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
 //        view.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1) // 一般会有系统默认色。不注释，会有影响
@@ -52,7 +52,7 @@ class WebViewVC: UIViewController {
         return view
     }()
     // 监测中
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == kEstimatedProgress {
             progressView.alpha = 1.0
             progressView.setProgress(Float(webView.estimatedProgress), animated: true)
@@ -96,7 +96,7 @@ class WebViewVC: UIViewController {
         }
     }
 }
-
+/*
 extension WebViewVC : WKUIDelegate, WKNavigationDelegate {
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         //展示
@@ -115,3 +115,4 @@ extension WebViewVC : WKUIDelegate, WKNavigationDelegate {
         //隐藏
     }
 }
+ */
