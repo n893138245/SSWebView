@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import StellarPulicConst
+//import StellarPulicConst
 import pop
 
 class UVAlertView: UIView {
