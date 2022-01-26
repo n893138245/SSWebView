@@ -4,7 +4,9 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - SSWebView (0.1.0)
+  - SnapKit (4.2.0)
+  - SSWebView (0.1.0):
+    - SnapKit
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -13,6 +15,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - FBSnapshotTestCase
+    - SnapKit
 
 EXTERNAL SOURCES:
   SSWebView:
@@ -20,7 +23,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  SSWebView: b821a3830c89c555c93533c82d786e64477d3433
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SSWebView: f16058dd7d982a33227802bf1b9c1caa0d9d1a14
 
 PODFILE CHECKSUM: 4e3169f45a616a562c5429868ecb13d3474edd4c
 

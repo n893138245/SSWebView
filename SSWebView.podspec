@@ -42,4 +42,5 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'SnapKit' #尝试引入第三方依赖库
+  $.dependency 'pop' #UVAlertView依赖库
 end

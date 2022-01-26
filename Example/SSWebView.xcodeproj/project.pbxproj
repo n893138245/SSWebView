@@ -293,10 +293,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SSWebView_Example/Pods-SSWebView_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SSWebView/SSWebView.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSWebView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

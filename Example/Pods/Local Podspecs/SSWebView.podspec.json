@@ -3,20 +3,25 @@
   "version": "0.1.0",
   "summary": "A short description of SSWebView.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/高光辉/SSWebView",
+  "homepage": "https://github.com/n893138245/SSWebView",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "高光辉": "gaoguanghui@sansi.com"
+    "聂秀盛": "893138245@163.com"
   },
   "source": {
-    "git": "https://github.com/高光辉/SSWebView.git",
+    "git": "https://github.com/n893138245/SSWebView.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "SSWebView/Classes/**/*"
+  "source_files": "SSWebView/Classes/**/*",
+  "dependencies": {
+    "SnapKit": [
+
+    ]
+  }
 }

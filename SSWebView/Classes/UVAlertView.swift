@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import StellarPulicConst
+import pop
 
 class UVAlertView: UIView {
     
@@ -29,8 +31,13 @@ class UVAlertView: UIView {
         return view
     }
     
+    /// 获取当前的根视图控制器
+    func CURRENT_ROOT_VC() -> UIViewController {
+        return UIApplication.shared.keyWindow!.rootViewController!
+    }
+    
     func show() {
-        CURRENT_TOP_VC().view.addSubview(self)
+        CURRENT_ROOT_VC().view.addSubview(self)
         let basic = POPBasicAnimation.init(propertyNamed: kPOPViewBackgroundColor)
         basic?.fromValue = UIColor.black.withAlphaComponent(0.0)
         basic?.toValue = UIColor.black.withAlphaComponent(0.4)
