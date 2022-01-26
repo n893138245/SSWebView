@@ -6,22 +6,21 @@
 //
 
 import UIKit
-//import StellarPulicConst
 import pop
 
-class UVAlertView: UIView {
+public class UVAlertView: UIView {
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet weak public var subTitleLabel: UILabel!
     @IBOutlet weak var alertContentView: UIView!
     @IBOutlet weak var cancelButton: UIButton!
-    @IBOutlet weak var quitButton: UIButton!
+    @IBOutlet weak public var quitButton: UIButton!
     
-    var leftClick: (() ->Void)?
+    public var leftClick: (() ->Void)?
     
-    var rightClick: (() ->Void)?
+    public var rightClick: (() ->Void)?
     
-    class func UVAlertView(_ title:String = "", subTitle: String = "",rightBtnTitle: String = "Quit") ->UVAlertView {
+    public class func UVAlertView(_ title:String = "", subTitle: String = "",rightBtnTitle: String = "Quit") ->UVAlertView {
         let view = Bundle.main.loadNibNamed("UVAlertView", owner: nil, options: nil)?.last as! UVAlertView
         view.titleLabel.text = title
         view.subTitleLabel.text = subTitle
@@ -35,8 +34,8 @@ class UVAlertView: UIView {
     func CURRENT_ROOT_VC() -> UIViewController {
         return UIApplication.shared.keyWindow!.rootViewController!
     }
-    
-    func show() {
+        
+    public func show() {
         CURRENT_ROOT_VC().view.addSubview(self)
         let basic = POPBasicAnimation.init(propertyNamed: kPOPViewBackgroundColor)
         basic?.fromValue = UIColor.black.withAlphaComponent(0.0)
@@ -56,7 +55,7 @@ class UVAlertView: UIView {
         removeFromSuperview()
     }
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         alertContentView.layer.cornerRadius = 10
         cancelButton.layer.cornerRadius = 5

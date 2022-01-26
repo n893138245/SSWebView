@@ -34,9 +34,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'SSWebView/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'SSWebView' => ['SSWebView/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'SSWebView' => ['SSWebView/Assets/*.{xib,png}']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
